@@ -1,0 +1,120 @@
+
+
+.container {
+
+    margin-left: 400px;
+    max-width: 768px; 
+    margin: 50px;
+    padding: 84px; 
+    background-color: white;
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  }
+  
+ 
+
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 32px; /* Espacio entre el título del paso y el contenido */
+  }
+  
+  .process-title {
+    font-size: 20px;
+    font-weight: semi-bold;
+    margin-bottom: 24px; /* Espacio entre el título del proceso y los pasos */
+  }
+  
+  .steps {
+    margin: 32px 0; /* Aumentar el margen superior e inferior */
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  .step-circle {
+    width: 40px; /* w-10 en Tailwind */
+    height: 40px; /* h-10 en Tailwind */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid;
+  }
+  
+  .step-title {
+    position: absolute;
+    bottom: -45px; 
+    text-align: center;
+  }
+  
+  .step-line {
+    flex: 1;
+    height: 2px; /* h-0.5 en Tailwind */
+  }
+  
+  .step-active {
+    background-color: #3b82f6; /* bg-blue-500 en Tailwind */
+    border-color: #3b82f6; /* border-blue-500 en Tailwind */
+    color: white; /* text-white en Tailwind */
+  }
+  
+  .step-inactive {
+    border-color: #d1d5db; /* border-gray-300 en Tailwind */
+    color: #d1d5db; /* text-gray-300 en Tailwind */
+  }
+  
+  .content {
+    margin-top: 32px; /* mt-16 en Tailwind */
+    padding: 24px; /* p-6 en Tailwind */
+    background-color: #f3f4f6; /* bg-gray-100 en Tailwind */
+    border-radius: 8px; /* rounded-lg en Tailwind */
+    
+  }
+  
+  .title {
+    font-size: 24px; /* text-2xl en Tailwind */
+    font-weight: bold; /* font-bold en Tailwind */
+    margin-bottom: 16px; /* mb-4 en Tailwind */
+  }
+  
+  .text {
+    color: #4b5563; /* text-gray-600 en Tailwind */
+    margin-bottom: 20px; /* mb-4 en Tailwind */
+  }
+  
+  .button-container {
+    margin-top: 32px; /* mt-8 en Tailwind */
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .button {
+    padding: 8px 16px; /* px-4 py-2 en Tailwind */
+    border-radius: 4px; /* rounded en Tailwind */
+    cursor: pointer;
+  }
+  
+  .button-prev {
+    background-color: #d1d5db; /* bg-gray-300 en Tailwind */
+    color: #374151; /* text-gray-700 en Tailwind */
+  }
+  
+  .button-prev:hover {
+    background-color: #a1a1a1; /* hover:bg-gray-400 en Tailwind */
+  }
+  
+  .button-next {
+    background-color: #3b82f6; /* bg-blue-500 en Tailwind */
+    color: white; /* text-white en Tailwind */
+  }
+  
+  .button-next:hover {
+    background-color: #2563eb; /* hover:bg-blue-600 en Tailwind */
+  }
+  
+  .button:disabled {
+    opacity: 0.5; /* disabled:opacity-50 en Tailwind */
+    cursor: not-allowed; /* disabled:cursor-not-allowed en Tailwind */
+  }
+  

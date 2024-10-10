@@ -1,0 +1,32 @@
+ /* Body and background styles */
+ body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    overflow: hidden;
+}
+
+/* Background style with image */
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./image.jpg') no-repeat center center / cover; 
+    transition: filter 0.3s ease-in-out;
+    z-index: 0;
+}
+
+/* Style of loading text */
+.loading-text {
+    font-size: 50px;
+    color: #fff;
+    z-index: 1;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}

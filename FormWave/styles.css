@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+:root {
+ 
+    --background-color: #000;
+    --text-color: #fff;
+    --container-bg-color: #006fff;
+    --btn-bg-color: #69b4ff;
+    --btn-text-color: #000;
+    --input-border-color: #fff;
+    --input-border-focus-color: #69b4ff;
+    --label-focus-color: #000;
+
+
+    --container-padding: 20px 40px;
+    --btn-padding: 15px;
+    --input-padding: 15px 0;
+    --font-size: 18px;
+    --border-radius: 5px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.form-container {
+    background-color: var(--container-bg-color);
+    padding: var(--container-padding);
+    border-radius: var(--border-radius);
+}
+
+.form-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-container a {
+    text-decoration: none;
+    color: var(--btn-text-color);
+}
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    background-color: var(--btn-bg-color);
+    padding: var(--btn-padding);
+    font-family: inherit;
+    font-size: 16px;
+    border: 0;
+    border-radius: var(--border-radius);
+}
+
+.btn:focus {
+    outline: 0;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.text {
+    margin-top: 30px;
+}
+
+.form-control {
+    position: relative;
+    margin: 20px 0 40px;
+    width: 300px;
+}
+
+.form-control input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px var(--input-border-color) solid;
+    display: block;
+    width: 100%;
+    padding: var(--input-padding);
+    font-size: var(--font-size);
+    color: var(--text-color);
+}
+
+.form-control input:focus,
+.form-control input:valid {
+    outline: 0;
+    border-bottom-color: var(--input-border-focus-color);
+}
+
+.form-control label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+}
+
+.form-control label span {
+    display: inline-block;
+    font-size: var(--font-size);
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus+label span,
+.form-control input:valid+label span {
+    color: var(--label-focus-color);
+    transform: translateY(-30px);
+}

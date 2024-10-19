@@ -1,0 +1,63 @@
+:root {
+    
+    --primary-color: #007bff;
+    --primary-color-hover: #0056b3;
+    --background-color: #f0f0f0;
+    --text-color: #333;
+    --card-bg-color: #fff;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --text-secondary: #555;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#joke-container {
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#joke-header {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.joke-card {
+    background-color: var(--card-bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--card-shadow);
+    margin-bottom: 20px;
+}
+
+#joke-text {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+}
+
+#new-joke-btn {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#new-joke-btn:hover {
+    background-color: var(--primary-color-hover);
+}
+

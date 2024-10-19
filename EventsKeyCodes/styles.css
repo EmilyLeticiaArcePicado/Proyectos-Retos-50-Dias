@@ -1,0 +1,41 @@
+:root {
+    --key-background: #333;
+    --key-text: #fff;
+    --key-padding: 10px;
+    --key-margin: 5px;
+    --key-font-size: 1.2rem;
+}
+
+
+#key-container {
+    margin-top: 200px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: var(--key-background);
+}
+
+
+
+.key {
+    background-color: var(--key-background);
+    color: var(--key-text);
+    padding: var(--key-padding);
+    margin: var(--key-margin);
+    font-size: var(--key-font-size);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+
+.key small {
+    margin-left: 5px;
+    font-size: 0.8rem;
+    color: #666;
+}

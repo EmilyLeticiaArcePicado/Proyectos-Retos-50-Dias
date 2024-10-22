@@ -1,0 +1,56 @@
+:root {
+    --font-family: Arial, sans-serif;
+    --background-color: #f0f0f0;
+    --counter-bg: white;
+    --counter-padding: 20px;
+    --counter-border-radius: 8px;
+    --counter-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+    --counter-width: 150px;
+    --counter-font-size: 2em;
+    --counter-font-weight: bold;
+    --span-color: #555;
+    --span-margin-top: 5px;
+}
+
+body {
+    font-family: var(--font-family);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--background-color);
+    background-image: url('./cool-background.png');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+}
+
+.counter-container {
+    text-align: center;
+    background: var(--counter-bg);
+    padding: var(--counter-padding);
+    border-radius: var(--counter-border-radius);
+    box-shadow: var(--counter-shadow);
+    width: var(--counter-width);
+}
+
+.counter {
+    font-size: var(--counter-font-size);
+    font-weight: var(--counter-font-weight);
+    margin: 10px 0;
+}
+
+span {
+    display: block;
+    margin-top: var(--span-margin-top);
+    color: var(--span-color); 
+}
+

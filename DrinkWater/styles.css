@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --font-family: 'Poppins', sans-serif;
+    --background-gradient-start: #e0f7fa;
+    --background-gradient-end: #b2ebf2;
+    --container-bg: rgba(255, 255, 255, 0.8);
+    --container-border-radius: 20px;
+    --container-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --header-color: #0288d1;
+    --header-font-size: 2.5rem;
+    --header-subtitle-color: #03a9f4;
+    --water-bottle-bg: rgba(3, 169, 244, 0.1);
+    --water-bottle-border: 4px solid #03a9f4;
+    --water-color: #03a9f4;
+    --stat-color: #0288d1;
+    --stat-muted-color: #757575;
+    --instruction-color: #616161;
+    --glass-bg: rgba(3, 169, 244, 0.1);
+    --glass-border: 2px solid #03a9f4;
+    --glass-active-bg: #03a9f4;
+    --glass-active-color: white;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background: linear-gradient(135deg, var(--background-gradient-start), var(--background-gradient-end));
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: var(--container-bg);
+    border-radius: var(--container-border-radius);
+    box-shadow: var(--container-box-shadow);
+    padding: 2rem;
+    width: 90%;
+    max-width: 600px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    color: var(--header-color);
+    font-size: var(--header-font-size);
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: var(--header-subtitle-color);
+    font-size: 1.2rem;
+}
+
+.water-bottle {
+    position: relative;
+    width: 150px;
+    height: 300px;
+    background-color: var(--water-bottle-bg);
+    border: var(--water-bottle-border);
+    border-radius: var(--container-border-radius);
+    margin: 0 auto 2rem;
+    overflow: hidden;
+}
+
+.water-level {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--water-color);
+    transition: height 0.5s ease-out;
+}
+
+.measurement-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.line {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    border-top: 1px dashed var(--water-color);
+    color: var(--water-color);
+    font-size: 0.8rem;
+    padding-left: 5px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat span {
+    display: block;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--stat-color);
+}
+
+.stat small {
+    color: var(--stat-muted-color);
+}
+
+.instruction {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--instruction-color);
+}
+
+.glasses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.glass {
+    width: 60px;
+    height: 80px;
+    background-color: var(--glass-bg);
+    border: var(--glass-border);
+    border-radius: 10px 10px 5px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.8rem;
+    color: var(--stat-color);
+}
+
+.glass:hover {
+    transform: scale(1.05);
+    background-color: rgba(3, 169, 244, 0.2);
+}
+
+.glass.active {
+    background-color: var(--glass-active-bg);
+    color: var(--glass-active-color);
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--stat-muted-color);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .water-bottle {
+        width: 120px;
+        height: 240px;
+    }
+
+    .glass {
+        width: 50px;
+        height: 70px;
+        font-size: 0.7rem;
+    }
+}

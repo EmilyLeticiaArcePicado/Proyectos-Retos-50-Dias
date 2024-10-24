@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+:root {
+    /* Colors*/
+    --primary-color: #0d1148;
+    --secondary-color: #3a3e6d;
+    --accent-color: #7f8095;
+    --text-color-light: #fff;
+    --text-color-dark: #eee;
+    --rating-green: lightgreen;
+    --rating-orange: orange;
+    --rating-red: red;
+    --background-light: #bcb8b8;
+
+    /* Sources */
+    --font-family: 'Poppins', sans-serif;
+    --font-size-base: 1rem;
+    --font-size-small: 0.875rem;
+    --font-size-large: 1.25rem;
+
+    /* Borders and shadows */
+    --border-radius: 5px;
+    --input-border-radius: 50px;
+    --box-shadow: 0 4px 5px rgba(0, 0, 0, .2);
+    --input-border: 2px solid var(--accent-color);
+
+  
+    /* Spacing */
+    --padding-base: 1rem;
+    --padding-small: 0.5rem;
+    --padding-large: 2rem;
+    --margin-base: 1rem;
+
+    /* Transitions */
+    --transition-speed: 0.3s;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: var(--font-family);
+    margin: 0;
+}
+
+header {
+    padding: var(--padding-base);
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--secondary-color);
+}
+
+.search {
+    background-color: transparent;
+    border: var(--input-border);
+    border-radius: var(--input-border-radius);
+    font-size: var(--font-size-base);
+    padding: var(--padding-small) var(--padding-base);
+    color: var(--text-color-light);
+}
+
+.search::placeholder {
+    color: var(--accent-color);
+}
+
+.search:focus {
+    outline: none;
+    background-color: var(--primary-color);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie {
+    width: 300px;
+    margin: var(--margin-base);
+    background-color: var(--secondary-color);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    position: relative;
+    overflow: hidden;
+}
+
+.movie img {
+    width: 100%;
+}
+
+.movie-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding-small);
+    color: var(--text-color-dark);
+}
+
+.movie-info span {
+    padding: var(--padding-small) var(--padding-base);
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    background-color: var(--primary-color);
+}
+
+.movie-info span.green {
+    color: var(--rating-green);
+}
+
+.movie-info span.orange {
+    color: var(--rating-orange);
+}
+
+.movie-info span.red {
+    color: var(--rating-red);
+}
+
+.overview {
+    padding: var(--padding-base);
+    background-color: var(--background-light);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(100%);
+    transition: transform var(--transition-speed) ease-in-out;
+}
+
+.movie:hover .overview {
+    transform: translateY(0);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: var(--margin-base);
+}
+
+.pagination button {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    border: none;
+    padding: var(--padding-small) var(--padding-base);
+    margin: 0 0.2rem;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    font-family: inherit;
+}
+
+.pagination button.active {
+    background-color: var(--accent-color);
+}
+
+.pagination button:hover {
+    background-color: var(--accent-color);
+}
